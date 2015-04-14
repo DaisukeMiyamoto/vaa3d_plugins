@@ -1,7 +1,7 @@
 TEMPLATE	= lib
 CONFIG	+= qt plugin warn_off
 #CONFIG	+= x86_64
-V3DMAINPATH = ../v3d_external/v3d_main
+V3DMAINPATH = /home/nebula/work/vaa3d/v3d_external/v3d_main
 INCLUDEPATH     += $$V3DMAINPATH/basic_c_fun
 INCLUDEPATH     += $$V3DMAINPATH/common_lib/include
 INCLUDEPATH     += app2
@@ -19,6 +19,7 @@ LIBS += -llibnewmat
 }
 
 #LIBS += -llibm
+LIBS  += -
 
 HEADERS	+= vaa3dneuron2_plugin.h
 HEADERS += vn_imgpreprocess.h
@@ -30,7 +31,7 @@ HEADERS += app1/gd.h
 HEADERS += app2/fastmarching_tree.h
 HEADERS += app2/hierarchy_prune.h
 HEADERS += app2/fastmarching_dt.h
-
+HEADERS += app2/my_fastmarching.h
 
 SOURCES += vn_imgpreprocess.cpp
 SOURCES += app2_connector.cpp
